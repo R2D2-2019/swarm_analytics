@@ -8,7 +8,7 @@ from common.frames import FrameCommandId
 class Module:
     def __init__(self, comm: BaseComm):
         self.comm = comm
-        self.comm.listen_for([FrameType.BUTTON_STATE])
+        self.comm.listen_for([FrameType.COMMAND_LOG])
 
     def process(self):
         while self.comm.has_data():
